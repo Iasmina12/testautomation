@@ -1,3 +1,4 @@
+from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
@@ -45,3 +46,9 @@ class BasePage:
         ).until(
             ec.text_to_be_present_in_element_value(selector, text)
         )
+
+    def hover(self, selector):
+        element = self.get_element(selector)
+        ac = ActionChains(self.driver)
+        ac.move_to_element(element)
+        ac.perform()

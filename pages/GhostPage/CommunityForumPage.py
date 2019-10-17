@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from ..BasePage import BasePage
 
-class ComunityForumPage(BasePage):
+class CommunityForumPage(BasePage):
 
     _search_button_selector =(By.ID, 'search-button')
     _search_input_selector = (By.ID, 'search-term')
